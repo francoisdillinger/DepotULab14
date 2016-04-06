@@ -1,0 +1,15 @@
+
+<div ng-controller="NewBlog as new">
+    <h1>{{message}}</h1>
+    <fieldset>
+        <form>
+            <label>Title</label><br>
+                    <input class="" type="text" placeholder="Give me a title!" name="title"  ng-model="blog.title" required><br>
+            <label>Author</label><br>
+                    <input class="" type="text" placeholder="What is your name handsome?" name="author"  ng-model="blog.author" required><br>
+            <label>Content</label><br>
+                    <textarea name="content" id="message" cols="30" rows="10"  ng-model="blog.content" required></textarea><br>
+            <input class="button" type="submit" value="Submit" ng-click="sendToServer()">
+        </form>
+    </fieldset>
+</div>

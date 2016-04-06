@@ -1,0 +1,12 @@
+<div ng-controller="BlogMain as blog">
+   <h1>{{message}}</h1> 
+        <div>
+           <ul ng-repeat="blog in blogpost | orderBy: '-createdAt'">
+               <li>{{blog.title}}</li>
+               <li>{{blog.author}}</li>
+               <li>{{blog.createdAt | date: 'medium'}}</li>
+               <a href="#/postcontent/{{blog.id}}">Read more</a>
+           </ul> 
+        </div>
+   <button ng-click="getFromServer()">Get my blog</button>
+</div>

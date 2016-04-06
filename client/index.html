@@ -1,12 +1,12 @@
-<!doctype html>
-<html x-ng-app="">
+<!doctype>
+<html data-ng-app="myBlog">
 	<head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
@@ -15,12 +15,18 @@
 		<script src="js/controllers.js"></script>
     </head>
 	<body>
-		<div class="container">
-			<div class="page-header">
-				<h1>MyBlog!</h1>
-                <h1>{{"How are you?"}}</h1>
+        
+		<div class="container" ng-controller="Home">
+            <button ng-click="buttonOne()">Home</button>
+            <button ng-click="buttonTwo()">New Blog</button>
+			<div class="page-header" >
+                <h1>MyBlog! Or so they say...</h1>
+                
+                <div data-ng-view>
+                    
+                </div>               
 			</div>
 		</div>
-		<div ng-view></div>
 	</body>
 </html>
+
